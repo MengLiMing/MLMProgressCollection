@@ -11,4 +11,5 @@
     3.其它...
     4.刻度表盘现有一bug需修复，设置度数0-360时，起点终点刻度值重叠
 
-
+#统计
+![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/Statistical.png)
