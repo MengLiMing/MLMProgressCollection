@@ -25,6 +25,8 @@
 		0F1CD5E81D532B34001A1047 /* CalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */; };
 		0F3922A11D54646400A95642 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F39229F1D54646400A95642 /* redDot.png */; };
 		0F3922A21D54646400A95642 /* blueDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3922A01D54646400A95642 /* blueDot.png */; };
+		0F6C2FE71D7FF8BD007F217A /* MLMStatisticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C2FE61D7FF8BD007F217A /* MLMStatisticalView.m */; };
+		0F6C2FEB1D7FF979007F217A /* StatisticalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C2FEA1D7FF979007F217A /* StatisticalVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationViewController.m; sourceTree = "<group>"; };
 		0F39229F1D54646400A95642 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
 		0F3922A01D54646400A95642 /* blueDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueDot.png; sourceTree = "<group>"; };
+		0F6C2FE51D7FF8BD007F217A /* MLMStatisticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMStatisticalView.h; sourceTree = "<group>"; };
+		0F6C2FE61D7FF8BD007F217A /* MLMStatisticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMStatisticalView.m; sourceTree = "<group>"; };
+		0F6C2FE91D7FF979007F217A /* StatisticalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticalVC.h; sourceTree = "<group>"; };
+		0F6C2FEA1D7FF979007F217A /* StatisticalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticalVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				0F1CD5C61D52D136001A1047 /* MLMProgress */,
+				0F6C2FE81D7FF964007F217A /* StatisticalVC */,
 				0F11FE741D5AFA0B00AF2BB2 /* TotalProgressVC */,
 				0F1CD5C01D52D0B0001A1047 /* ProgressVC */,
 				0F1CD5E51D532B1A001A1047 /* CalibrationVC */,
@@ -244,6 +251,7 @@
 				0F1CD5D21D52D255001A1047 /* MLMProgressHeader.h */,
 				0F1CD5CF1D52D1EF001A1047 /* MLMProgressView.h */,
 				0F1CD5D01D52D1EF001A1047 /* MLMProgressView.m */,
+				0F6C2FE41D7FF8BD007F217A /* statistical */,
 				0F11FE831D5B2C5F00AF2BB2 /* circle */,
 				0F11FE7F1D5B2C5A00AF2BB2 /* calibration */,
 				0F11FE781D5B2C5200AF2BB2 /* Help */,
@@ -258,6 +266,24 @@
 				0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */,
 			);
 			name = CalibrationVC;
+			sourceTree = "<group>";
+		};
+		0F6C2FE41D7FF8BD007F217A /* statistical */ = {
+			isa = PBXGroup;
+			children = (
+				0F6C2FE51D7FF8BD007F217A /* MLMStatisticalView.h */,
+				0F6C2FE61D7FF8BD007F217A /* MLMStatisticalView.m */,
+			);
+			path = statistical;
+			sourceTree = "<group>";
+		};
+		0F6C2FE81D7FF964007F217A /* StatisticalVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F6C2FE91D7FF979007F217A /* StatisticalVC.h */,
+				0F6C2FEA1D7FF979007F217A /* StatisticalVC.m */,
+			);
+			name = StatisticalVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +420,7 @@
 			files = (
 				0F1CD5E81D532B34001A1047 /* CalibrationViewController.m in Sources */,
 				0F1CD58A1D52CE36001A1047 /* AppDelegate.m in Sources */,
+				0F6C2FEB1D7FF979007F217A /* StatisticalVC.m in Sources */,
 				0F11FE861D5B2C5F00AF2BB2 /* MLMCircleView.m in Sources */,
 				0F11FE821D5B2C5A00AF2BB2 /* MLMCalibrationView.m in Sources */,
 				0F11FE7D1D5B2C5200AF2BB2 /* UIView+Extensions.m in Sources */,
@@ -401,6 +428,7 @@
 				0F1CD5871D52CE36001A1047 /* main.m in Sources */,
 				0F1CD5BF1D52CEE7001A1047 /* MainTableViewController.m in Sources */,
 				0F11FE771D5AFA6400AF2BB2 /* TotalProgressVC.m in Sources */,
+				0F6C2FE71D7FF8BD007F217A /* MLMStatisticalView.m in Sources */,
 				0F1CD5C41D52D0E2001A1047 /* ProgressViewController.m in Sources */,
 				0F11FE7E1D5B2C5200AF2BB2 /* UIView+TapAction.m in Sources */,
 			);
