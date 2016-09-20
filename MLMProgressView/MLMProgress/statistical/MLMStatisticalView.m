@@ -132,6 +132,11 @@
             endAngle = _endAngle;
         } else {
             endAngle = end + (1-scale) * (_endAngle - _startAngle);
+            
+            //逆时针角度计算bug解决
+            if (endAngle > 360) {
+                endAngle -= 360;
+            }
         }
         
         CGFloat scaleRadius = radius + [_widthArray[i] floatValue]/2;
