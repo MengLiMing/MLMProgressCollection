@@ -123,6 +123,9 @@
     for (NSInteger i = 0; i < _scaleArray.count; i ++) {
         //百分比
         CGFloat scale = [_scaleArray[i] floatValue];
+        if (scale == 0) {
+            continue;
+        }
         //开始角度
         CGFloat startAngle = end;
         CGFloat endAngle;
