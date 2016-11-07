@@ -131,7 +131,7 @@
         CGFloat endAngle;
 
         //防止转换过程，出现偏差
-        if (i == _scaleArray.count - 1) {
+        if (i == _scaleArray.count - 1 || scale == 1) {
             endAngle = _endAngle;
         } else {
             endAngle = end + (1-scale) * (_endAngle - _startAngle);
