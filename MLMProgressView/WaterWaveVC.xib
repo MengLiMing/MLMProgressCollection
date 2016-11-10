@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-Qw-6tt">
+                    <rect key="frame" x="102" y="541" width="267" height="31"/>
+                    <connections>
+                        <action selector="changProgress:" destination="-1" eventType="valueChanged" id="Qbe-8Z-8w8"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHk-s2-Fbp">
+                    <rect key="frame" x="16" y="546" width="68" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进度变化的动画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-he-qNn">
+                    <rect key="frame" x="16" y="504" width="122" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAL-Fq-cCX">
+                    <rect key="frame" x="169" y="499" width="51" height="31"/>
+                    <connections>
+                        <action selector="animationAction:" destination="-1" eventType="valueChanged" id="LbZ-hm-TCM"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qHk-s2-Fbp" secondAttribute="bottom" constant="100" id="GBZ-zJ-WUg"/>
+                <constraint firstItem="cAL-Fq-cCX" firstAttribute="leading" secondItem="h2Z-he-qNn" secondAttribute="trailing" constant="31" id="K5N-um-2EC"/>
+                <constraint firstItem="f0f-Qw-6tt" firstAttribute="centerY" secondItem="qHk-s2-Fbp" secondAttribute="centerY" id="URF-5w-klJ"/>
+                <constraint firstItem="qHk-s2-Fbp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="eic-Gg-AKd"/>
+                <constraint firstItem="f0f-Qw-6tt" firstAttribute="leading" secondItem="qHk-s2-Fbp" secondAttribute="trailing" constant="20" id="kOM-36-nFe"/>
+                <constraint firstItem="cAL-Fq-cCX" firstAttribute="centerY" secondItem="h2Z-he-qNn" secondAttribute="centerY" id="l7m-Zm-Fgh"/>
+                <constraint firstItem="h2Z-he-qNn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="oBY-Wy-KeS"/>
+                <constraint firstAttribute="trailing" secondItem="f0f-Qw-6tt" secondAttribute="trailing" constant="8" id="uaQ-15-pUE"/>
+                <constraint firstItem="f0f-Qw-6tt" firstAttribute="top" secondItem="h2Z-he-qNn" secondAttribute="bottom" constant="16" id="zDQ-ku-wDY"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

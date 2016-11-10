@@ -25,6 +25,9 @@
 		0F1CD5E81D532B34001A1047 /* CalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */; };
 		0F3922A11D54646400A95642 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F39229F1D54646400A95642 /* redDot.png */; };
 		0F3922A21D54646400A95642 /* blueDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3922A01D54646400A95642 /* blueDot.png */; };
+		0F52017A1DD48521007EC95F /* MLMWaveWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5201791DD48521007EC95F /* MLMWaveWaterView.m */; };
+		0F52017F1DD48593007EC95F /* WaterWaveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F52017D1DD48593007EC95F /* WaterWaveVC.m */; };
+		0F5201801DD48593007EC95F /* WaterWaveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F52017E1DD48593007EC95F /* WaterWaveVC.xib */; };
 		0F6C2FE71D7FF8BD007F217A /* MLMStatisticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C2FE61D7FF8BD007F217A /* MLMStatisticalView.m */; };
 		0F6C2FEB1D7FF979007F217A /* StatisticalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6C2FEA1D7FF979007F217A /* StatisticalVC.m */; };
 /* End PBXBuildFile section */
@@ -82,6 +85,11 @@
 		0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationViewController.m; sourceTree = "<group>"; };
 		0F39229F1D54646400A95642 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
 		0F3922A01D54646400A95642 /* blueDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueDot.png; sourceTree = "<group>"; };
+		0F5201781DD48521007EC95F /* MLMWaveWaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMWaveWaterView.h; sourceTree = "<group>"; };
+		0F5201791DD48521007EC95F /* MLMWaveWaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMWaveWaterView.m; sourceTree = "<group>"; };
+		0F52017C1DD48593007EC95F /* WaterWaveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterWaveVC.h; sourceTree = "<group>"; };
+		0F52017D1DD48593007EC95F /* WaterWaveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterWaveVC.m; sourceTree = "<group>"; };
+		0F52017E1DD48593007EC95F /* WaterWaveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterWaveVC.xib; sourceTree = "<group>"; };
 		0F6C2FE51D7FF8BD007F217A /* MLMStatisticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMStatisticalView.h; sourceTree = "<group>"; };
 		0F6C2FE61D7FF8BD007F217A /* MLMStatisticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMStatisticalView.m; sourceTree = "<group>"; };
 		0F6C2FE91D7FF979007F217A /* StatisticalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticalVC.h; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				0F11FE741D5AFA0B00AF2BB2 /* TotalProgressVC */,
 				0F1CD5C01D52D0B0001A1047 /* ProgressVC */,
 				0F1CD5E51D532B1A001A1047 /* CalibrationVC */,
+				0F52017B1DD48535007EC95F /* WaterWaveVC */,
 				0F1CD5B91D52CE79001A1047 /* MainVC */,
 				0F1CD5B81D52CE6B001A1047 /* Appdelegate */,
 				0F1CD5911D52CE36001A1047 /* Assets.xcassets */,
@@ -251,6 +260,7 @@
 				0F1CD5D21D52D255001A1047 /* MLMProgressHeader.h */,
 				0F1CD5CF1D52D1EF001A1047 /* MLMProgressView.h */,
 				0F1CD5D01D52D1EF001A1047 /* MLMProgressView.m */,
+				0F5201771DD48516007EC95F /* waterWave */,
 				0F6C2FE41D7FF8BD007F217A /* statistical */,
 				0F11FE831D5B2C5F00AF2BB2 /* circle */,
 				0F11FE7F1D5B2C5A00AF2BB2 /* calibration */,
@@ -266,6 +276,25 @@
 				0F1CD5E71D532B34001A1047 /* CalibrationViewController.m */,
 			);
 			name = CalibrationVC;
+			sourceTree = "<group>";
+		};
+		0F5201771DD48516007EC95F /* waterWave */ = {
+			isa = PBXGroup;
+			children = (
+				0F5201781DD48521007EC95F /* MLMWaveWaterView.h */,
+				0F5201791DD48521007EC95F /* MLMWaveWaterView.m */,
+			);
+			path = waterWave;
+			sourceTree = "<group>";
+		};
+		0F52017B1DD48535007EC95F /* WaterWaveVC */ = {
+			isa = PBXGroup;
+			children = (
+				0F52017C1DD48593007EC95F /* WaterWaveVC.h */,
+				0F52017D1DD48593007EC95F /* WaterWaveVC.m */,
+				0F52017E1DD48593007EC95F /* WaterWaveVC.xib */,
+			);
+			name = WaterWaveVC;
 			sourceTree = "<group>";
 		};
 		0F6C2FE41D7FF8BD007F217A /* statistical */ = {
@@ -392,6 +421,7 @@
 				0F3922A21D54646400A95642 /* blueDot.png in Resources */,
 				0F11FE731D5AF9E200AF2BB2 /* brightDot.png in Resources */,
 				0F1CD5951D52CE36001A1047 /* LaunchScreen.storyboard in Resources */,
+				0F5201801DD48593007EC95F /* WaterWaveVC.xib in Resources */,
 				0F1CD5921D52CE36001A1047 /* Assets.xcassets in Resources */,
 				0F3922A11D54646400A95642 /* redDot.png in Resources */,
 			);
@@ -422,6 +452,7 @@
 				0F1CD58A1D52CE36001A1047 /* AppDelegate.m in Sources */,
 				0F6C2FEB1D7FF979007F217A /* StatisticalVC.m in Sources */,
 				0F11FE861D5B2C5F00AF2BB2 /* MLMCircleView.m in Sources */,
+				0F52017A1DD48521007EC95F /* MLMWaveWaterView.m in Sources */,
 				0F11FE821D5B2C5A00AF2BB2 /* MLMCalibrationView.m in Sources */,
 				0F11FE7D1D5B2C5200AF2BB2 /* UIView+Extensions.m in Sources */,
 				0F1CD5D11D52D1EF001A1047 /* MLMProgressView.m in Sources */,
@@ -431,6 +462,7 @@
 				0F6C2FE71D7FF8BD007F217A /* MLMStatisticalView.m in Sources */,
 				0F1CD5C41D52D0E2001A1047 /* ProgressViewController.m in Sources */,
 				0F11FE7E1D5B2C5200AF2BB2 /* UIView+TapAction.m in Sources */,
+				0F52017F1DD48593007EC95F /* WaterWaveVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

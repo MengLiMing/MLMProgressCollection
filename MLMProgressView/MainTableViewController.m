@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MLMProgress";
-    listArray = @[@"进度",@"刻度",@"合体",@"统计"];
+    listArray = @[@"进度",@"刻度",@"合体",@"统计",@"水波"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +75,13 @@
         case 3:
         {
             UIViewController *vc = [NSClassFromString(@"StatisticalVC") new];
+            vc.title = listArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            UIViewController *vc = [NSClassFromString(@"WaterWaveVC") new];
             vc.title = listArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
