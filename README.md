@@ -4,6 +4,9 @@
 
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/Untitled.gif)
 
+#水波进度
+![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
+
 ####待升级(当然也可以贡献你们的代码)
 
     1.进度条颜色渐变设置
