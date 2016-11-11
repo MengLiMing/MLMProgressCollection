@@ -1,9 +1,12 @@
 # MLMCircleProgress
 
-#圆形进度条和刻度，也可以将两种进行组合
+###主要功能
+![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/all.gif)  
+    
+    1.水波
+    2.圆形进度条和刻度，也可以将两种进行组合
+    3.简单统计
 
-#整体效果
-![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/all.gif)
 
 ###水波进度
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
