@@ -1,4 +1,4 @@
-# MLMCircleProgress
+# MLMProgressCollection
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/all.gif)
 ###主要功能
 
