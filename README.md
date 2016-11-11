@@ -3,14 +3,7 @@
 #圆形进度条和刻度，也可以将两种进行组合
 
 #整体效果
-![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/Untitled.gif)
-
-###仪表盘
-      
-    MLMCalibrationView + MLMCircleView 实现不同样式的仪表盘
-    
-    具体使用，我已经在MLMProgressView写了两种样式的例子，你也可以使用上述两种view进行组合
-    将 instrument 和 help 文件夹直接拖入工程
+![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/all.gif)
 
 ###水波进度
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
@@ -29,7 +22,17 @@
     
     wave_scale 调节波纹速度
     progress_scale progress_animation设置为YES时调节动画速度
+
+
+###仪表盘
+![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/instrument.gif)
+
+    MLMCalibrationView + MLMCircleView 实现不同样式的仪表盘
     
+    具体使用，我已经在MLMProgressView写了两种样式的例子，你也可以使用上述两种view进行组合
+    将 instrument 和 help 文件夹直接拖入工程
+
+
 ###统计
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/Statistical.png)
 
