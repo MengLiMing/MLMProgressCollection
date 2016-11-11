@@ -20,9 +20,10 @@
 @property (nonatomic, assign) CGFloat wave_Cycle;//周期，w
 
 @property (nonatomic, assign) CGFloat wave_distance;//两个波之间偏移
-@property (nonatomic, assign) CGFloat wave_scale;//速率
 
-@property (nonatomic, assign) CGFloat progress_scale;//速率
+
+@property (nonatomic, assign) CGFloat wave_scale;//水波速率
+@property (nonatomic, assign) CGFloat progress_scale;//progress速率
 
 @property (nonatomic, assign) BOOL progress_animation;//是否需要进度变化的动画，默认YES
 
