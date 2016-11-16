@@ -43,8 +43,9 @@
     _wave_Cycle = 2*M_PI/(self.frame.size.width * .9);
     
     
-    _wave_distance = 2*M_PI/_wave_Cycle * .8;
-    
+    _wave_h_distance = 2*M_PI/_wave_Cycle * .65;
+    _wave_v_distance = _wave_Amplitude * .2;
+
     _wave_move_width = 0.5;
     
     _wave_scale = 0.5;
@@ -62,13 +63,15 @@
 
 #pragma mark - drawRect
 - (void)drawRect:(CGRect)rect {
-    [self drawWave:0 withColor:_topColor];
-    [self drawWave:_wave_distance withColor:_bottomColor];
+    
+    [self drawWaveColor:_topColor offsetx:0 offsety:0];
+    [self drawWaveColor:_bottomColor offsetx:_wave_h_distance offsety:_wave_v_distance];
+
 }
 
 
 #pragma mark - draw wave
-- (void)drawWave:(CGFloat)offsetY withColor:(UIColor*)color {
+- (void)drawWaveColor:(UIColor *)color offsetx:(CGFloat)offsetx offsety:(CGFloat)offsety {
     //波浪动画，所以进度的实际操作范围是，多加上两个振幅的高度,到达设置进度的位置y坐标
     CGFloat end_offY = (1-_progress) * (self.frame.size.height + 2* _wave_Amplitude);
     if (_progress_animation) {
@@ -86,7 +89,7 @@
     UIBezierPath *wave = [UIBezierPath bezierPath];
     for (float next_x= 0.f; next_x <= self.frame.size.width; next_x ++) {
         //正弦函数
-        CGFloat next_y = _wave_Amplitude * sin(_wave_Cycle*next_x + _wave_offsetx + offsetY/200*2*M_PI) + _wave_offsety;
+        CGFloat next_y = _wave_Amplitude * sin(_wave_Cycle*next_x + _wave_offsetx + offsetx/200*2*M_PI) + _wave_offsety + offsety;
         if (next_x == 0) {
             [wave moveToPoint:CGPointMake(next_x, next_y - _wave_Amplitude)];
         } else {
@@ -123,8 +126,8 @@
     [self setNeedsDisplay];
 }
 
-- (void)setWave_distance:(CGFloat)wave_distance {
-    _wave_distance = wave_distance;
+- (void)setWave_h_distance:(CGFloat)wave_h_distance {
+    _wave_h_distance = wave_h_distance;
     [self setNeedsDisplay];
 }
 
