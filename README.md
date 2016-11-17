@@ -7,22 +7,27 @@
     3.简单统计
     
 ###水波进度
+更新：添加borderPath 属性，可以自定义水波的容器，也在UIView+MLMBorderPath中提供了集中容器样式，使用者也可以自己在其中添加样式
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
+ 使用 将 waterWave 文件夹拖入工程
+     
+     borderPath 边界path，水波的容器
+     order_fillColor 容器填充色
+     border_strokeColor 容器描边色     
+     
+     topColor 深色水纹的颜色
+     bottomColor 浅色水纹的颜色
+     progress 设置进度（0-1）
+     progress_animation 设置进度改变时是否使用动画，默认YES
     
-    使用 将 waterWave 文件夹拖入工程
-    topColor 深色水纹的颜色
-    bottomColor 浅色水纹的颜色
-    progress 设置进度（0-1）
-    progress_animation 设置进度改变时是否使用动画，默认YES
     
+     其他属性可以微调水波的样式：
+     wave_Amplitude 振幅，默认设置为view的1/20，具体可以自己设置
+     wave_Cycle 周期，默认设置为一个周期是view宽度的0.9
+     wave_distance 深色波纹和浅色波纹之间的偏移，默认偏移，一个周期宽度的0.8
     
-    其他属性可以微调水波的样式：
-    wave_Amplitude 振幅，默认设置为view的1/20，具体可以自己设置
-    wave_Cycle 周期，默认设置为一个周期是view宽度的0.9
-    wave_distance 深色波纹和浅色波纹之间的偏移，默认偏移，一个周期宽度的0.8
-    
-    wave_scale 调节波纹速度
-    progress_scale progress_animation设置为YES时调节动画速度
+     wave_scale 调节波纹速度
+     progress_scale progress_animation设置为YES时调节动画速度
 
 
 ###仪表盘
