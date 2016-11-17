@@ -6,7 +6,7 @@
     3.简单统计
     
 ###水波进度
-更新：添加borderPath 属性，可以自定义水波的容器，也在UIView+MLMBorderPath中提供了几种容器样式，使用者也可以自己在其中添加样式
+####更新：添加borderPath 属性，可以自定义水波的容器，也在UIView+MLMBorderPath中提供了几种容器样式，使用者也可以自己在其中添加样式
 
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
 
