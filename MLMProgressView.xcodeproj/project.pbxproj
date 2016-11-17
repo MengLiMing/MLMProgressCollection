@@ -30,6 +30,7 @@
 		0F9DD2091DD55B250036CE26 /* blueDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DD2061DD55B250036CE26 /* blueDot.png */; };
 		0F9DD20A1DD55B250036CE26 /* brightDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DD2071DD55B250036CE26 /* brightDot.png */; };
 		0F9DD20B1DD55B250036CE26 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9DD2081DD55B250036CE26 /* redDot.png */; };
+		0FD6E5791DDD859D00C6F923 /* UIView+MLMBorderPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD6E5781DDD859D00C6F923 /* UIView+MLMBorderPath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		0F9DD2061DD55B250036CE26 /* blueDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueDot.png; sourceTree = "<group>"; };
 		0F9DD2071DD55B250036CE26 /* brightDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brightDot.png; sourceTree = "<group>"; };
 		0F9DD2081DD55B250036CE26 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
+		0FD6E5771DDD859D00C6F923 /* UIView+MLMBorderPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MLMBorderPath.h"; sourceTree = "<group>"; };
+		0FD6E5781DDD859D00C6F923 /* UIView+MLMBorderPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MLMBorderPath.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +260,8 @@
 		0F5201771DD48516007EC95F /* waterWave */ = {
 			isa = PBXGroup;
 			children = (
+				0FD6E5771DDD859D00C6F923 /* UIView+MLMBorderPath.h */,
+				0FD6E5781DDD859D00C6F923 /* UIView+MLMBorderPath.m */,
 				0F5201781DD48521007EC95F /* MLMWaveWaterView.h */,
 				0F5201791DD48521007EC95F /* MLMWaveWaterView.m */,
 			);
@@ -462,6 +467,7 @@
 				0F6C2FEB1D7FF979007F217A /* StatisticalVC.m in Sources */,
 				0F52017A1DD48521007EC95F /* MLMWaveWaterView.m in Sources */,
 				0F11FE7D1D5B2C5200AF2BB2 /* UIView+Extensions.m in Sources */,
+				0FD6E5791DDD859D00C6F923 /* UIView+MLMBorderPath.m in Sources */,
 				0F1CD5871D52CE36001A1047 /* main.m in Sources */,
 				0F1CD5BF1D52CEE7001A1047 /* MainTableViewController.m in Sources */,
 				0F11FE771D5AFA6400AF2BB2 /* TotalProgressVC.m in Sources */,

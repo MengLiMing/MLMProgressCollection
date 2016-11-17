@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaterWaveVC">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-Qw-6tt">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-Qw-6tt">
                     <rect key="frame" x="102" y="541" width="267" height="31"/>
                     <connections>
                         <action selector="changProgress:" destination="-1" eventType="valueChanged" id="Qbe-8Z-8w8"/>
@@ -43,16 +43,30 @@
                         <action selector="animationAction:" destination="-1" eventType="valueChanged" id="LbZ-hm-TCM"/>
                     </connections>
                 </switch>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xyN-qg-fgf">
+                    <rect key="frame" x="16" y="440" width="343" height="29"/>
+                    <segments>
+                        <segment title="default"/>
+                        <segment title="heart"/>
+                        <segment title="circle"/>
+                    </segments>
+                    <connections>
+                        <action selector="borderTypeAction:" destination="-1" eventType="valueChanged" id="Ct3-yE-Crc"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="qHk-s2-Fbp" secondAttribute="bottom" constant="100" id="GBZ-zJ-WUg"/>
                 <constraint firstItem="cAL-Fq-cCX" firstAttribute="leading" secondItem="h2Z-he-qNn" secondAttribute="trailing" constant="31" id="K5N-um-2EC"/>
                 <constraint firstItem="f0f-Qw-6tt" firstAttribute="centerY" secondItem="qHk-s2-Fbp" secondAttribute="centerY" id="URF-5w-klJ"/>
+                <constraint firstAttribute="trailing" secondItem="xyN-qg-fgf" secondAttribute="trailing" constant="16" id="ZKU-DH-S9b"/>
+                <constraint firstItem="xyN-qg-fgf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ZSG-Oq-D7J"/>
                 <constraint firstItem="qHk-s2-Fbp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="eic-Gg-AKd"/>
                 <constraint firstItem="f0f-Qw-6tt" firstAttribute="leading" secondItem="qHk-s2-Fbp" secondAttribute="trailing" constant="20" id="kOM-36-nFe"/>
                 <constraint firstItem="cAL-Fq-cCX" firstAttribute="centerY" secondItem="h2Z-he-qNn" secondAttribute="centerY" id="l7m-Zm-Fgh"/>
                 <constraint firstItem="h2Z-he-qNn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="oBY-Wy-KeS"/>
+                <constraint firstItem="cAL-Fq-cCX" firstAttribute="top" secondItem="xyN-qg-fgf" secondAttribute="bottom" constant="31" id="uEo-bR-DXo"/>
                 <constraint firstAttribute="trailing" secondItem="f0f-Qw-6tt" secondAttribute="trailing" constant="8" id="uaQ-15-pUE"/>
                 <constraint firstItem="f0f-Qw-6tt" firstAttribute="top" secondItem="h2Z-he-qNn" secondAttribute="bottom" constant="16" id="zDQ-ku-wDY"/>
             </constraints>

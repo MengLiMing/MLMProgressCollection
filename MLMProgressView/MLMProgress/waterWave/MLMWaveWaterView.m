@@ -8,7 +8,6 @@
 
 #import "MLMWaveWaterView.h"
 
-
 @interface MLMWaveWaterView ()
 {
     CGFloat _wave_offsety;//根据进度计算(波峰所在位置的y坐标)
@@ -30,6 +29,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.clipsToBounds = YES;
+        self.backgroundColor = [UIColor whiteColor];
         [self initView];
     }
     
@@ -63,11 +63,27 @@
 
 #pragma mark - drawRect
 - (void)drawRect:(CGRect)rect {
-    
+    if (_borderPath) {
+        
+        if (_border_fillColor) {
+            [_border_fillColor setFill];
+            [_borderPath fill];
+        }
+        
+        if (_border_strokeColor) {
+            [_border_strokeColor setStroke];
+            [_borderPath stroke];
+        }
+        
+        [_borderPath addClip];
+    }
     [self drawWaveColor:_topColor offsetx:0 offsety:0];
     [self drawWaveColor:_bottomColor offsetx:_wave_h_distance offsety:_wave_v_distance];
 
 }
+
+
+
 
 
 #pragma mark - draw wave
@@ -103,6 +119,21 @@
 }
 
 #pragma mark - animation
+- (void)setBorderPath:(UIBezierPath *)borderPath {
+    _borderPath = borderPath;
+    [self setNeedsDisplay];
+}
+
+- (void)setBorder_fillColor:(UIColor *)border_fillColor {
+    _border_fillColor = border_fillColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setBorder_strokeColor:(UIColor *)border_strokeColor {
+    _border_strokeColor = border_strokeColor;
+    [self setNeedsDisplay];
+}
+
 - (void)changeoff {
     _wave_offsetx += _wave_move_width*_wave_scale;
     [self setNeedsDisplay];

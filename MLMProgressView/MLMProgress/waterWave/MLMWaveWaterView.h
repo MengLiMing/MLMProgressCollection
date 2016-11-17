@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLMWaveWaterView.h"
 
 @interface MLMWaveWaterView : UIView
+
+///边界path，水波的容器
+@property (nonatomic, strong) UIBezierPath *borderPath;
+//容器填充色
+@property (nonatomic, strong) UIColor *border_fillColor;
+//容器描边色
+@property (nonatomic, strong) UIColor *border_strokeColor;
+
+
 
 ///前方波纹颜色
 @property (nonatomic, strong) UIColor *topColor;
