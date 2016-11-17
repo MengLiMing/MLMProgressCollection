@@ -8,7 +8,9 @@
     
 ###水波进度
 更新：添加borderPath 属性，可以自定义水波的容器，也在UIView+MLMBorderPath中提供了集中容器样式，使用者也可以自己在其中添加样式
+
 ![image](https://github.com/MengLiMing/MLMCircleProgress/blob/master/waterWave.gif)
+
  使用 将 waterWave 文件夹拖入工程
      
      borderPath 边界path，水波的容器
