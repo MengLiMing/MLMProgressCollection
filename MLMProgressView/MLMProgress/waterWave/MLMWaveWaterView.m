@@ -105,7 +105,7 @@
     UIBezierPath *wave = [UIBezierPath bezierPath];
     for (float next_x= 0.f; next_x <= self.frame.size.width; next_x ++) {
         //正弦函数
-        CGFloat next_y = _wave_Amplitude * sin(_wave_Cycle*next_x + _wave_offsetx + offsetx/200*2*M_PI) + _wave_offsety + offsety;
+        CGFloat next_y = _wave_Amplitude * sin(_wave_Cycle*next_x + _wave_offsetx + offsetx/self.bounds.size.width*2*M_PI) + _wave_offsety + offsety;
         if (next_x == 0) {
             [wave moveToPoint:CGPointMake(next_x, next_y - _wave_Amplitude)];
         } else {
