@@ -28,7 +28,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.clipsToBounds = YES;
         self.backgroundColor = [UIColor whiteColor];
         [self initView];
     }
@@ -39,7 +38,7 @@
 #pragma mark - initView
 - (void)initView {
     
-    _wave_Amplitude = self.frame.size.width/20;
+    _wave_Amplitude = self.frame.size.height/20;
     _wave_Cycle = 2*M_PI/(self.frame.size.width * .9);
     
     

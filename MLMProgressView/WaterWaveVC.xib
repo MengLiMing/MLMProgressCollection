@@ -49,6 +49,7 @@
                         <segment title="default"/>
                         <segment title="heart"/>
                         <segment title="circle"/>
+                        <segment title="star"/>
                     </segments>
                     <connections>
                         <action selector="borderTypeAction:" destination="-1" eventType="valueChanged" id="Ct3-yE-Crc"/>

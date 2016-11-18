@@ -36,29 +36,47 @@
 }
 
 - (IBAction)borderTypeAction:(UISegmentedControl *)sender {
+    
+    CGRect rect = waterView.frame;
+
     switch (sender.selectedSegmentIndex) {
         case 0:
         {
             waterView.borderPath = nil;
-            
+            rect.size.height = rect.size.width;
+
         }
             break;
         case 1:
         {
-            waterView.borderPath = [UIView heartPathRect:waterView.bounds lineWidth:0];
+            rect.size.height = rect.size.width * 9 /10;
+
+            waterView.borderPath = [UIView heartPathRect:rect lineWidth:0];
             waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
- 
+            
         }
             break;
         case 2:
         {
-            waterView.borderPath = [UIView circlePathRect:waterView.bounds lineWidth:0];
+            rect.size.height = rect.size.width;
+
+            waterView.borderPath = [UIView circlePathRect:rect lineWidth:0];
             waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
+        }
+            break;
+        case 3:
+        {
+            rect.size.height = rect.size.width * (sin(3*M_PI/10) + 1) / 2;
+
+            waterView.borderPath = [UIView startPathRect:rect lineWidth:0];
+            waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
+            
         }
             break;
         default:
             break;
     }
+    waterView.frame = rect;
 
 }
 
