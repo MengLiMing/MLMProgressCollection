@@ -102,8 +102,6 @@
 
 #pragma mark - 根据数组画统计
 - (void)drowStatistical {
-    //此处我就不判断你有木有传数组了，假定你不是来捣乱的
-    
     //获取最大的那个宽度
     CGFloat maxWidth = [self maxWidth:_widthArray];
     
@@ -149,6 +147,7 @@
                                                              startAngle:DEGREES_TO_RADIANS(startAngle)
                                                                endAngle:DEGREES_TO_RADIANS(endAngle)
                                                               clockwise:NO];
+        
         
         CAShapeLayer *scaleLayer = [CAShapeLayer layer];
         scaleLayer.fillColor = [UIColor clearColor].CGColor;
