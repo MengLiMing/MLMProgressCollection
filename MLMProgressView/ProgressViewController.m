@@ -99,7 +99,7 @@ static NSString * const reuseIdentifier = @"Cell";
     circle.backgroundColor = [UIColor clearColor];
     
     [circle tapHandle:^{
-        [circle setProgress:.9];
+        [circle setProgress:newProgress()];
     }];
     
     //自定义文字等label可在下方view中设置
@@ -125,7 +125,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [circle drawProgress];
     
     [circle tapHandle:^{
-        [circle setProgress:.91];
+        [circle setProgress:newProgress()];
     }];
     
     [cell addSubview:circle];
@@ -145,7 +145,7 @@ static NSString * const reuseIdentifier = @"Cell";
     circle.capRound = NO;
     [circle drawProgress];
     [circle tapHandle:^{
-        [circle setProgress:.91];
+        [circle setProgress:newProgress()];
     }];
     
     [cell addSubview:circle];
@@ -166,10 +166,17 @@ static NSString * const reuseIdentifier = @"Cell";
     [circle drawProgress];
     
     [circle tapHandle:^{
-        [circle setProgress:.91];
+        [circle setProgress:newProgress()];
+        
     }];
     
     
     [cell addSubview:circle];
 }
+
+
+CGFloat newProgress() {
+    return arc4random()%500/500.0;
+}
+
 @end

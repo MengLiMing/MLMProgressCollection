@@ -63,7 +63,6 @@
 #pragma mark - drawRect
 - (void)drawRect:(CGRect)rect {
     if (_borderPath) {
-        
         if (_border_fillColor) {
             [_border_fillColor setFill];
             [_borderPath fill];
@@ -80,10 +79,6 @@
     [self drawWaveColor:_bottomColor offsetx:_wave_h_distance offsety:_wave_v_distance];
 
 }
-
-
-
-
 
 #pragma mark - draw wave
 - (void)drawWaveColor:(UIColor *)color offsetx:(CGFloat)offsetx offsety:(CGFloat)offsety {
@@ -118,51 +113,9 @@
 }
 
 #pragma mark - animation
-- (void)setBorderPath:(UIBezierPath *)borderPath {
-    _borderPath = borderPath;
-    [self setNeedsDisplay];
-}
-
-- (void)setBorder_fillColor:(UIColor *)border_fillColor {
-    _border_fillColor = border_fillColor;
-    [self setNeedsDisplay];
-}
-
-- (void)setBorder_strokeColor:(UIColor *)border_strokeColor {
-    _border_strokeColor = border_strokeColor;
-    [self setNeedsDisplay];
-}
-
 - (void)changeoff {
     _wave_offsetx += _wave_move_width*_wave_scale;
     [self setNeedsDisplay];
-}
-
-
-#pragma mark - setter
-- (void)setProgress:(CGFloat)progress {
-    _progress = progress;
-    [self setNeedsDisplay];
-    
-}
-
-- (void)setWave_Amplitude:(CGFloat)wave_Amplitude {
-    _wave_Amplitude = wave_Amplitude;
-    [self setNeedsDisplay];
-}
-
-- (void)setWave_Cycle:(CGFloat)wave_Cycle {
-    _wave_Cycle = wave_Cycle;
-    [self setNeedsDisplay];
-}
-
-- (void)setWave_h_distance:(CGFloat)wave_h_distance {
-    _wave_h_distance = wave_h_distance;
-    [self setNeedsDisplay];
-}
-
-- (void)setWave_scale:(CGFloat)wave_scale {
-    _wave_scale = wave_scale;
 }
 
 #pragma mark - reStart

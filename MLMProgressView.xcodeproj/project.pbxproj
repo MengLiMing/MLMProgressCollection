@@ -395,6 +395,7 @@
 				TargetAttributes = {
 					0F1CD5811D52CE36001A1047 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5MEUQ98276;
 					};
 					0F1CD59A1D52CE37001A1047 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -609,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5MEUQ98276;
 				INFOPLIST_FILE = MLMProgressView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MLM.MLMProgressView;
@@ -620,6 +622,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5MEUQ98276;
 				INFOPLIST_FILE = MLMProgressView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MLM.MLMProgressView;

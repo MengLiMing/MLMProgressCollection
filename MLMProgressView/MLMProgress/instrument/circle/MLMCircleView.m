@@ -18,6 +18,8 @@
     CGFloat _startAngle;
     ///终点
     CGFloat _endAngle;
+    
+    CGFloat lastProgress;
 }
 
 @property (nonatomic, strong) UIImageView *dotImageView;//光标
@@ -157,13 +159,20 @@
     //动画结束不被移除
     pathAnimation.fillMode = kCAFillModeForwards;
     pathAnimation.removedOnCompletion = NO;
-    
+    pathAnimation.rotationMode = kCAAnimationRotateAuto;
     pathAnimation.duration = kAnimationTime;
     pathAnimation.repeatCount = 1;
     
     //设置动画路径
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddArc(path, NULL, self.width/2, self.height/2, progressRadius, DEGREES_TO_RADIANS(_startAngle), (DEGREES_TO_RADIANS(_endAngle) - DEGREES_TO_RADIANS(_startAngle))*_progress + DEGREES_TO_RADIANS(_startAngle), 0);
+
+    CGPathAddArc(path,
+                 NULL,
+                 self.width/2,
+                 self.height/2,
+                 progressRadius,
+                 DEGREES_TO_RADIANS(_endAngle - _startAngle)*lastProgress + DEGREES_TO_RADIANS(_startAngle),
+                 DEGREES_TO_RADIANS(_endAngle - _startAngle)*_progress + DEGREES_TO_RADIANS(_startAngle), lastProgress > _progress);
     pathAnimation.path=path;
     CGPathRelease(path);
     [self.dotImageView.layer addAnimation:pathAnimation forKey:@"moveMarker"];
@@ -176,7 +185,10 @@
 }
 
 - (void)setProgressAnimation:(BOOL)animation {
-
+    if (_progress == lastProgress) {
+        return;
+    }
+    
     [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(circleAnimation) userInfo:nil repeats:NO];
     
     [self createAnimation];
@@ -186,19 +198,19 @@
 - (void)circleAnimation {
     //开启事务
     [CATransaction begin];
-    //禁用隐式动画
-    [CATransaction setDisableActions:NO];
     //线性
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     [CATransaction setAnimationDuration:0];
-    self.progressLayer.strokeEnd = 0;
+    self.progressLayer.strokeEnd = lastProgress;
     [CATransaction commit];
     
     //开启事务
     [CATransaction begin];
-    //禁用隐式动画
-    [CATransaction setDisableActions:NO];
+
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [CATransaction setCompletionBlock:^{
+        lastProgress = _progress;
+    }];
     [CATransaction setAnimationDuration:kAnimationTime];
     self.progressLayer.strokeEnd = _progress;
     [CATransaction commit];
