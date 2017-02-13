@@ -49,7 +49,9 @@
             break;
         case 1:
         {
-            rect.size.height = rect.size.width * 9 /10;
+            CGRect frame = waterView.bounds;
+            frame.size.height = frame.size.width * 9 /10;
+            waterView.changeFrame = frame;
 
             waterView.borderPath = [UIView heartPathRect:rect lineWidth:0];
             waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
@@ -58,16 +60,29 @@
             break;
         case 2:
         {
-            rect.size.height = rect.size.width;
 
+            waterView.changeFrame = waterView.bounds;
+
+            
             waterView.borderPath = [UIView circlePathRect:rect lineWidth:0];
             waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
         }
             break;
         case 3:
         {
-            rect.size.height = rect.size.width * (sin(3*M_PI/10) + 1) / 2;
+            //五角星距离中心距离
+            CGFloat redius_star = rect.size.width/2;
+            
+            CGFloat star_w = redius_star * sin(2*M_PI/5)*2;
+            CGFloat star_h = redius_star * (sin(3*M_PI/10) + 1);
+            
+            //图形所在区域frame
+            CGRect changeFrame = CGRectMake((rect.size.width -star_w)/2, 0, star_w, star_h);
+            
+            rect.size.height = star_h;
 
+            waterView.changeFrame = changeFrame;
+            
             waterView.borderPath = [UIView startPathRect:rect lineWidth:0];
             waterView.border_fillColor = [UIColor groupTableViewBackgroundColor];
             
@@ -76,8 +91,6 @@
         default:
             break;
     }
-    waterView.frame = rect;
-
 }
 
 

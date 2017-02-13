@@ -149,10 +149,19 @@
     self.progressLayer.path = [progressPath CGPath];
     self.progressLayer.strokeEnd = 0;
     [self.layer addSublayer:self.progressLayer];
+    
+    
+    //add image.layer to progressLayer
 }
+
+
 
 #pragma mark - 动画
 - (void)createAnimation {
+    CGFloat centerX = self.width/2 + progressRadius*cosf(DEGREES_TO_RADIANS(_endAngle - _startAngle)*lastProgress);
+    CGFloat centerY = self.width/2 + progressRadius*sinf(DEGREES_TO_RADIANS(_endAngle - _startAngle)*lastProgress);
+    _dotImageView.center = CGPointMake(centerX, centerY);
+    
     //设置动画
     CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     pathAnimation.calculationMode = kCAAnimationPaced;//使得动画均匀进行
@@ -188,34 +197,30 @@
     if (_progress == lastProgress) {
         return;
     }
-    
-    [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(circleAnimation) userInfo:nil repeats:NO];
-    
     [self createAnimation];
+    [self circleAnimation];
 }
 
 
 - (void)circleAnimation {
     //开启事务
     [CATransaction begin];
-    //线性
-    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
-    [CATransaction setAnimationDuration:0];
+    //关闭动画
+    [CATransaction setDisableActions:YES];
     self.progressLayer.strokeEnd = lastProgress;
     [CATransaction commit];
     
-    //开启事务
-    [CATransaction begin];
 
-    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
-    [CATransaction setCompletionBlock:^{
-        lastProgress = _progress;
-    }];
-    [CATransaction setAnimationDuration:kAnimationTime];
-    self.progressLayer.strokeEnd = _progress;
-    [CATransaction commit];
-    
-    self.progressLayer.strokeStart = 0;
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = kAnimationTime;
+    animation.repeatCount = 1;
+    animation.fromValue = @(lastProgress);
+    animation.toValue = @(_progress);
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    [self.progressLayer addAnimation:animation forKey:@"strokeEndAni"];
+    lastProgress = _progress;
 }
 
 - (void)dotHidden:(BOOL)hidden {

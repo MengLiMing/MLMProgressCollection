@@ -82,6 +82,7 @@
 
 #pragma mark - draw wave
 - (void)drawWaveColor:(UIColor *)color offsetx:(CGFloat)offsetx offsety:(CGFloat)offsety {
+    
     //波浪动画，所以进度的实际操作范围是，多加上两个振幅的高度,到达设置进度的位置y坐标
     CGFloat end_offY = (1-_progress) * (self.frame.size.height + 2* _wave_Amplitude);
     if (_progress_animation) {

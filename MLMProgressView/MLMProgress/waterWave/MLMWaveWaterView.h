@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MLMWaveWaterView.h"
 
+typedef enum {
+    WaveDirectionLeft,
+    WaveDirectionRight,
+    WaveDirectionTop,
+    WaveDirectionBottom
+} WaveDirection;
+
+
 @interface MLMWaveWaterView : UIView
 
 ///边界path，水波的容器
@@ -18,7 +26,7 @@
 //容器描边色
 @property (nonatomic, strong) UIColor *border_strokeColor;
 
-
+@property (nonatomic, assign) WaveDirection *waveDirection;
 
 ///前方波纹颜色
 @property (nonatomic, strong) UIColor *topColor;
@@ -44,5 +52,8 @@
 
 ///是否需要进度变化的动画，默认YES
 @property (nonatomic, assign) BOOL progress_animation;
+
+///对于不规则图形，进度变化相对于自身的frame
+@property (nonatomic) CGRect changeFrame;
 
 @end
